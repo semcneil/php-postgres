@@ -12,6 +12,6 @@ to permissions of 640.
 sudo ln -s /path/to/original_target /path/to/symlink_name
 sudo chown seth /etc/myphp
 sudo chgrp www-data /etc/myphp
-sudo chmod 740 /etc/myphp
+sudo chmod 750 /etc/myphp
 sudo chmod 640 *.php
 ```
