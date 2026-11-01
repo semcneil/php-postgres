@@ -29,7 +29,7 @@ try {
     $pdo = new PDO($dsn, $db_user, $db_pass, $options);
 
     // 3. Fetch the data from your table (replace 'your_table_name')
-    $stmt = $pdo->query('SELECT "ID", data, created_at FROM testjunk2 ORDER BY created_at DESC');
+    $stmt = $pdo->query('SELECT id, data, created_at FROM testjunk2 ORDER BY created_at DESC');
     $rows = $stmt->fetchAll();
 
 } catch (PDOException $e) {
@@ -64,7 +64,7 @@ try {
             <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($row['ID']); ?></td>
+                        <td><?php echo htmlspecialchars($row['id']); ?></td>
                         <td><?php echo htmlspecialchars($row['data']); ?></td>
                         <td><?php echo htmlspecialchars($row['created_at']); ?></td>
                     </tr>
