@@ -1,6 +1,7 @@
 <?php
 // 1. Load the credentials securely using parse_ini_file
-$env_path = '/etc/iot-creds/vars.sh';
+// $env_path = '/etc/iot-creds/vars.sh';  // if not using Hestia
+$env_path = '../private/var.env';  // if using Hestia user space
 
 if (!file_exists($env_path)) {
     die("Configuration file missing.");
